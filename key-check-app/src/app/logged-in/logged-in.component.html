@@ -1,0 +1,62 @@
+<div class="container">
+	<h2 class="welcome">Welcome, {{ user.userId }}</h2>
+	<p class="role">Role: 
+	  <span [ngClass]="{'admin': user.role === 'Admin', 'general-user': user.role === 'General User'}">
+		{{ user.role }}
+	  </span>
+	</p>
+	<p class="email">Email: {{ user.email }}</p>
+	<p class="user-details">User ID: {{ user.userId }}</p>
+
+	<!-- User Actions (General User) -->
+	<div class="user-actions">
+	  <button (click)="editUser(user)" class="btn edit-btn">Edit Your Details</button>
+	  <button (click)="deleteUser(user.id)" class="btn delete-btn">Delete Your Account</button>
+	</div>
+
+	<!-- Admin-Only Section -->
+	<div *ngIf="user.role === 'Admin'" class="admin-section">
+	  <h3 class="section-title">Manage Users</h3>
+	  <button (click)="showAddUser = !showAddUser" class="btn primary-btn">
+		{{ showAddUser ? 'Cancel' : 'Add New User' }}
+	  </button>
+
+	  <div *ngIf="showAddUser" class="form-container">
+		<input type="text" placeholder="UserID" [(ngModel)]="newUser.userId" class="input-field" />
+		<input type="email" placeholder="Email" [(ngModel)]="newUser.email" class="input-field" />
+		<input type="password" placeholder="Password" [(ngModel)]="newUser.password" class="input-field" />
+		<select [(ngModel)]="newUser.role" class="input-field">
+		  <option value="General User">General User</option>
+		  <option value="Admin">Admin</option>
+		</select>
+		<button (click)="addUser()" class="btn success-btn">Save</button>
+	  </div>
+
+	  <ul class="user-list">
+		<li *ngFor="let record of records" class="record-card">
+			<h4 class="record-user">{{ record.userId }}</h4>
+			<p class="record-user">{{ record.id }}</p>
+			<p class="record-data">{{ record.name }}</p>
+			<p class="record-data">{{ record.email }}</p>
+			<p class="record-data">{{ record.data }}</p>
+			<p class="record-data">{{ record.timestamp }}</p>		 
+		 <button (click)="editUser(record)" class="btn edit-btn">Edit</button>
+		  <button (click)="deleteUser(record.id)" class="btn delete-btn">Delete</button>
+		</li>
+	  </ul>
+	</div>
+
+	<!-- Edit User Form -->
+	<div *ngIf="showEditUser" class="form-container">
+	  <h3 class="section-title">Edit User</h3>
+	  <input type="text" placeholder="UserID" [(ngModel)]="editUserObj.userId" class="input-field" />
+	  <input type="email" placeholder="Email" [(ngModel)]="editUserObj.email" class="input-field" />
+	  <input type="password" placeholder="Password" [(ngModel)]="editUserObj.password" class="input-field" />
+	  <select [(ngModel)]="editUserObj.role" class="input-field" *ngIf="user.role === 'Admin'">
+		<option value="General User">General User</option>
+		<option value="Admin">Admin</option>
+	  </select>
+	  <button (click)="updateUser()" class="btn update-btn">Update</button>
+	</div>
+	
+</div>

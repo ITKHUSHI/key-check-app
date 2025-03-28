@@ -1,0 +1,41 @@
+.header {
+	background: #312f2f;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  nav{
+	 display: flex;
+	 align-items: center;
+	 justify-content: space-between;
+  }
+  .nav-links {
+	list-style: none;
+	display: flex;
+	flex: row;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	 
+  }
+  
+  .nav-links a {
+	color: white;
+	text-decoration: none;
+  }
+  button{
+	background: #dc3545;
+	color: #fff;
+	height: 30px;
+	width: 60px;
+	  
+	
+  }
+  button:hover{
+	background-color: #f42b0c;
+  }
+  .nav-links a:hover {
+	text-decoration: underline;
+  }
+  

@@ -1,0 +1,59 @@
+
+
+/* Centered Container */
+.container {
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hero Image */
+.hero-image {
+    width: 100px;
+    height: 100px;
+    animation: bounce 2s infinite;
+}
+
+/* Title */
+.app-title {
+    font-size: 32px;
+    margin-top: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Description */
+.description {
+    font-size: 18px;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+

@@ -1,0 +1,17 @@
+<header class="header">
+	<nav >
+		<div>
+			<h2>Key Check App</h2>
+
+		</div>
+	  <div>
+		<ul class="nav-links">
+			<li><a routerLink="/">Home</a></li>
+			<li><a routerLink="/login" *ngIf="!isAuthenticated()">Login</a></li>
+			<li><a routerLink="/logged-in" *ngIf="isAuthenticated()">Logged-In</a></li>
+			<li><button (click)="logout()" *ngIf="isAuthenticated()">Logout</button></li>
+		  </ul>
+	  </div>
+	</nav>
+  </header>
+  

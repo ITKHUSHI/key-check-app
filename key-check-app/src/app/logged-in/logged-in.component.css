@@ -1,0 +1,161 @@
+/* Container */
+
+/* Modernized UI with sleek d esign */
+.container {
+	min-height: 100vh;
+	max-width: 100vw;
+	margin: auto;
+	padding: 30px;
+	background: #3e3e41;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	color: #f8f9fa;
+	font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Welcome Message */
+  .welcome {
+	text-align: center;
+	font-size: 26px;
+	color: #f8f9fa;
+	margin-bottom: 20px;
+  }
+  
+  /* Role Styling */
+  .role {
+	text-align: center;
+	font-size: 18px;
+	margin-bottom: 15px;
+  }
+  
+  .admin {
+	color: #ff6b6b;
+	font-weight: bold;
+  }
+  
+  .general-user {
+	color: #4da8da;
+	font-weight: bold;
+  }
+  
+  /* Section Titles */
+  .section-title {
+	font-size: 22px;
+	color: #f1eaea;
+	border-bottom: 3px solid #f19f9f;
+	padding-bottom: 7px;
+	margin-top: 20px;
+  }
+  
+  /* User List */
+  .user-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+	margin-top: 20px;
+	padding: 0;
+	justify-content: center;
+  }
+  
+  /* User Card */
+  .record-card {
+	background: #282a36;
+	color: #ddd;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+	width: 100%;
+	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+	text-align: center;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+  }
+  @media screen and (max-width:800px){
+	.record-card{
+		max-width: 300px;
+		display: grid;
+		justify-content: center;
+	}
+
+	
+  }
+  
+  .record-card:hover {
+	transform: translateY(-8px);
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .record-user {
+	font-size: 20px;
+	font-weight: bold;
+	color: #f8f9fa;
+  }
+  
+  .record-data {
+	font-size: 16px;
+	color: #c7c7c7;
+  }
+  
+  /* Form Container */
+  .form-container {
+	background: #323645;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+	margin-top: 20px;
+	text-align: center;
+  }
+  
+  /* Input Fields */
+  .input-field {
+	width: 100%;
+	padding: 10px;
+	margin: 8px 0;
+	border: 1px solid #5c5f70;
+	border-radius: 5px;
+	background: #2c2f3f;
+	color: #f8f9fa;
+  }
+  
+  /* Buttons */
+  .btn {
+	padding: 10px 15px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 8px;
+	font-size: 16px;
+	transition: 0.3s;
+  }
+  
+  .primary-btn {
+	background: #007bff;
+	color: #fff;
+  }
+  
+  .success-btn {
+	background: #28a745;
+	color: #fff;
+  }
+  
+  .edit-btn {
+	background: #ffc107;
+	color: #333;
+  }
+  
+  .delete-btn {
+	background: #dc3545;
+	color: #fff;
+  }
+  
+  .update-btn {
+	background: #17a2b8;
+	color: #fff;
+  }
+  
+  .btn:hover {
+	transform: scale(1.05);
+	opacity: 0.9;
+  }
+  

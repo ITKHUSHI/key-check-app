@@ -1,0 +1,16 @@
+<div class="login-container">
+	<h2 class="login-title">Welcome Back!</h2>
+  
+	<div class="input-group">
+	  <label for="userId">User ID</label>
+	  <input type="text" id="userId" placeholder="Enter User ID" [(ngModel)]="credentials.userId" />
+	</div>
+  
+	<div class="input-group">
+	  <label for="password">Password</label>
+	  <input type="password" id="password" placeholder="Enter Password" [(ngModel)]="credentials.password" />
+	</div>
+  
+	<button class="login-btn" (click)="login()">Login</button>
+  </div>
+  
